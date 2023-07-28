@@ -45,7 +45,7 @@ console.log(location.pathname)
 // location.replace(baselocation + "/home.html")
 console.log(location.hostname  + "/" + baselocation + "/home.html")
 
-if(location.pathname.slice(0) == (baselocation.slice(1) + "/home.html"))
+if(location.pathname.slice(0) == (baselocation.slice(1) + "/home"))
 {
     if(localStorage.getItem('userSesstion') == null)
     {
@@ -57,7 +57,7 @@ if(location.pathname.slice(0) == (baselocation.slice(1) + "/home.html"))
     }
 }
 
-if(location.pathname.slice(0) == (baselocation.slice(1) + "/index.html"))
+if(location.pathname.slice(0) == (baselocation.slice(1) + "/index"))
 {
     if(localStorage.getItem('userSesstion'))
     {
