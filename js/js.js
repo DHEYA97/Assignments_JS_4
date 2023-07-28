@@ -100,8 +100,8 @@ if(login)
             {
                 userSesstionList.push(user[currentIndex])
                 localStorage.setItem('userSesstion',JSON.stringify(userSesstionList))
-                // console.log(userSesstionList);
-                location.replace('https://' + location.hostname  + "/" + baselocation + "/home.html")
+                console.log(baselocation);
+                // location.replace('https://' + location.hostname  + "/" + baselocation + "/home.html")
                 // if (baselocation == '/') {
                 //     location.replace('https://' + location.hostname + '/home.html')
         
