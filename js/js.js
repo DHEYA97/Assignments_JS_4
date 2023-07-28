@@ -48,7 +48,7 @@ if(location.pathname.slice(0) == (baselocation.slice(1) + "/home.html"))
 {
     if(localStorage.getItem('userSesstion') == null)
     {
-        location.replace( location.hostname  + "/" + baselocation + "/index.html")
+        location.replace(location.hostname  + "/" + baselocation + "/index.html")
     }
     else
     {
@@ -60,7 +60,7 @@ if(location.pathname.slice(0) == (baselocation.slice(1) + "/index.html"))
 {
     if(localStorage.getItem('userSesstion'))
     {
-        location.replace(blocation.hostname  + "/" + baselocation + "/home.html")
+        location.replace(location.hostname  + "/" + baselocation + "/home.html")
     }
 }
 
