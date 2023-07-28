@@ -48,13 +48,14 @@ if(location.pathname.slice(0) == (baselocation.slice(1) + "/home.html") || locat
 {
     if(localStorage.getItem('userSesstion') == null)
     {
-        console.log(55)
         // if (baselocation == '/') {
         //     location.replace('https://' + location.hostname + '/index.html')
         // } else {
         //     location.replace(baselocation + '/index.html')
         // }
-        // location.replace('https://' + location.hostname  + "/" + baselocation + "/index.html")
+
+        
+        location.replace("https://dheya97.github.io/Assignments_JS_4/index.html")
     }
     else
     {
@@ -66,13 +67,13 @@ if(location.pathname.slice(0) == (baselocation.slice(1) + "/index.html"))
 {
     if(localStorage.getItem('userSesstion'))
     {
-        console.log(66)
         // if (baselocation == '/') {
         //     location.replace('https://' + location.hostname + '/home.html')
         // } else {
         //     location.replace(baselocation + '/home.html')
         // }
-        // location.replace('https://' + location.hostname  + "/" + baselocation + "/home.html")
+       
+        location.replace("https://dheya97.github.io/Assignments_JS_4/home.html")
     }
 }
 
@@ -102,12 +103,14 @@ if(login)
             {
                 userSesstionList.push(user[currentIndex])
                 localStorage.setItem('userSesstion',JSON.stringify(userSesstionList))
-                // console.log(baselocation);
-                // location.replace(baselocation.slice(0) + "/home.html")
+                console.log(baselocation);
+                location.replace("https://dheya97.github.io/Assignments_JS_4/home.html")
+                
                 // if (baselocation == '/') {
                 //     location.replace('https://' + location.hostname + '/home.html')
         
                 // } else {
+                
                 //     location.replace(baselocation + '/home.html')
                 // }
             }
