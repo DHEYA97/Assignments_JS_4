@@ -45,7 +45,7 @@ console.log(location.pathname)
 // location.replace(baselocation + "/home.html")
 console.log(location.hostname  + "/" + baselocation + "/home.html")
 
-if(location.pathname.slice(0) == (baselocation.slice(1) + "/home"))
+if(location.pathname.slice(0) == (baselocation.slice(1) + "/home.html"))
 {
     if(localStorage.getItem('userSesstion') == null)
     {
@@ -92,7 +92,7 @@ if(login)
                 userSesstionList.push(user[currentIndex])
                 localStorage.setItem('userSesstion',JSON.stringify(userSesstionList))
                 // console.log(userSesstionList);
-                location.replace(baselocation + "/home.html")
+                location.replace(location.hostname  + "/" + baselocation + "/home.html")
             }
             else
             {
