@@ -51,10 +51,8 @@ if(location.pathname.slice(0) == (baselocation.slice(1) + "/home.html"))
     {
         if (baselocation == '/') {
             location.replace('https://' + location.hostname + '/index.html')
-
         } else {
             location.replace(baselocation + '/index.html')
-
         }
         // location.replace(location.hostname  + "/" + baselocation + "/index.html")
     }
@@ -64,16 +62,14 @@ if(location.pathname.slice(0) == (baselocation.slice(1) + "/home.html"))
     }
 }
 
-if(location.pathname.slice(0) == (baselocation.slice(1) + "/index"))
+if(location.pathname.slice(0) == (baselocation.slice(1) + "/index.html"))
 {
     if(localStorage.getItem('userSesstion'))
     {
         if (baselocation == '/') {
             location.replace('https://' + location.hostname + '/home.html')
-
         } else {
             location.replace(baselocation + '/home.html')
-
         }
         // location.replace(location.hostname  + "/" + baselocation + "/home.html")
     }
@@ -112,7 +108,6 @@ if(login)
         
                 } else {
                     location.replace(baselocation + '/home.html')
-        
                 }
             }
             else
