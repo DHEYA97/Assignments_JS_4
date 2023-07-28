@@ -30,7 +30,6 @@ else
     userSesstionList = JSON.parse(localStorage.getItem('userSesstion'))
 }
 // console.log(userSesstionList)
-
 // console.log(location.href)
 // console.log(location.hostname)
 var path = location.pathname.split("/")
@@ -39,22 +38,22 @@ for(var i = 0 ; i <path.length-1 ;i++)
 {
     baselocation += '/' + path[i]
 }
-console.log(location.pathname)
-console.log(baselocation.slice(1) + "/home.html")
-console.log(location.pathname)
-// location.replace(baselocation + "/home.html")
-console.log(location.hostname  + "/" + baselocation + "/home.html")
+// console.log(location.pathname)
+// console.log(baselocation.slice(1) + "/home.html")
+// console.log(location.pathname)
+// // location.replace(baselocation + "/home.html")
+// console.log(location.hostname  + "/" + baselocation + "/home.html")
 
-if(location.pathname.slice(0) == (baselocation.slice(1) + "/home.html"))
+if(location.pathname.slice(0) == (baselocation.slice(1) + "/home.html") || location.pathname.slice(0) == (baselocation.slice(1) + "/home"))
 {
     if(localStorage.getItem('userSesstion') == null)
     {
-        if (baselocation == '/') {
-            location.replace('https://' + location.hostname + '/index.html')
-        } else {
-            location.replace(baselocation + '/index.html')
-        }
-        // location.replace(location.hostname  + "/" + baselocation + "/index.html")
+        // if (baselocation == '/') {
+        //     location.replace('https://' + location.hostname + '/index.html')
+        // } else {
+        //     location.replace(baselocation + '/index.html')
+        // }
+        location.replace('https://' + location.hostname  + "/" + baselocation + "/index.html")
     }
     else
     {
@@ -66,12 +65,12 @@ if(location.pathname.slice(0) == (baselocation.slice(1) + "/index.html"))
 {
     if(localStorage.getItem('userSesstion'))
     {
-        if (baselocation == '/') {
-            location.replace('https://' + location.hostname + '/home.html')
-        } else {
-            location.replace(baselocation + '/home.html')
-        }
-        // location.replace(location.hostname  + "/" + baselocation + "/home.html")
+        // if (baselocation == '/') {
+        //     location.replace('https://' + location.hostname + '/home.html')
+        // } else {
+        //     location.replace(baselocation + '/home.html')
+        // }
+        location.replace('https://' + location.hostname  + "/" + baselocation + "/home.html")
     }
 }
 
@@ -102,13 +101,13 @@ if(login)
                 userSesstionList.push(user[currentIndex])
                 localStorage.setItem('userSesstion',JSON.stringify(userSesstionList))
                 // console.log(userSesstionList);
-                // location.replace(location.hostname  + "/" + baselocation + "/home.html")
-                if (baselocation == '/') {
-                    location.replace('https://' + location.hostname + '/home.html')
+                location.replace('https://' + location.hostname  + "/" + baselocation + "/home.html")
+                // if (baselocation == '/') {
+                //     location.replace('https://' + location.hostname + '/home.html')
         
-                } else {
-                    location.replace(baselocation + '/home.html')
-                }
+                // } else {
+                //     location.replace(baselocation + '/home.html')
+                // }
             }
             else
             {
