@@ -43,6 +43,7 @@ console.log(location.pathname)
 console.log(baselocation.slice(1) + "/home.html")
 console.log(location.pathname)
 // location.replace(baselocation + "/home.html")
+console.log(location.hostname  + "/" + baselocation + "/home.html")
 
 if(location.pathname.slice(0) == (baselocation.slice(1) + "/home.html"))
 {
