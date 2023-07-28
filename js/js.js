@@ -49,7 +49,14 @@ if(location.pathname.slice(0) == (baselocation.slice(1) + "/home.html"))
 {
     if(localStorage.getItem('userSesstion') == null)
     {
-        location.replace(location.hostname  + "/" + baselocation + "/index.html")
+        if (baselocation == '/') {
+            location.replace('https://' + location.hostname + '/index.html')
+
+        } else {
+            location.replace(baselocation + '/index.html')
+
+        }
+        // location.replace(location.hostname  + "/" + baselocation + "/index.html")
     }
     else
     {
@@ -61,7 +68,14 @@ if(location.pathname.slice(0) == (baselocation.slice(1) + "/index"))
 {
     if(localStorage.getItem('userSesstion'))
     {
-        location.replace(location.hostname  + "/" + baselocation + "/home.html")
+        if (baselocation == '/') {
+            location.replace('https://' + location.hostname + '/home.html')
+
+        } else {
+            location.replace(baselocation + '/home.html')
+
+        }
+        // location.replace(location.hostname  + "/" + baselocation + "/home.html")
     }
 }
 
@@ -92,7 +106,14 @@ if(login)
                 userSesstionList.push(user[currentIndex])
                 localStorage.setItem('userSesstion',JSON.stringify(userSesstionList))
                 // console.log(userSesstionList);
-                location.replace(location.hostname  + "/" + baselocation + "/home.html")
+                // location.replace(location.hostname  + "/" + baselocation + "/home.html")
+                if (baselocation == '/') {
+                    location.replace('https://' + location.hostname + '/home.html')
+        
+                } else {
+                    location.replace(baselocation + '/home.html')
+        
+                }
             }
             else
             {
